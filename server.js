@@ -4,7 +4,6 @@ const app = express()
 
 app.use(express.json());
 
-
 const productSchema = mongoose.Schema({
     name: {
         type: String,
@@ -41,6 +40,10 @@ app.get("/product", (req, res) => {
 })
 app.get("/users", (req, res) => {
     res.send({ message: "no users data found" })
+})
+
+app.get("/names", (req, res) => {
+    res.send({ message: "this pi is for names" })
 })
 app.post("/product", (req, res) => {
     //
